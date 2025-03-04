@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [nopcommerce Regression Suite]" parallel="tests">
+  <test thread-count="2" name="Chrome Regression Test(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.SearchProductPT">
+        <methods>
+          <include name="UserCanSearchForProducts"/>
+          <include name="screenshotOnFailure"/>
+          <include name="stopDriver"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.SearchProductPT -->
+    </classes>
+  </test> <!-- Chrome Regression Test(failed) -->
+  <test thread-count="2" name="Firefox Regression Test(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="tests.AddProductToShoppingCartTestPT">
+        <methods>
+          <include name="UserCanSearchWithAutoSuggest"/>
+          <include name="UserCanRemoveProductFromCart"/>
+          <include name="screenshotOnFailure"/>
+          <include name="stopDriver"/>
+          <include name="addQunatity"/>
+          <include name="setUp"/>
+          <include name="UserCanAddProductToShoppingCart"/>
+        </methods>
+      </class> <!-- tests.AddProductToShoppingCartTestPT -->
+    </classes>
+  </test> <!-- Firefox Regression Test(failed) -->
+</suite> <!-- Failed suite [nopcommerce Regression Suite] -->
